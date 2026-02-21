@@ -1,5 +1,6 @@
 package dev.lpa.client;
 
+import javax.sound.sampled.*;
 import java.io.IOException;
 import java.net.*;
 
@@ -17,13 +18,32 @@ public class UDPClient {
                     SERVER_PORT
             );
             socket.send(packet1);
+            playStreamAudio(socket);
 
-        } catch (SocketException e) {
+        } catch (IOException | LineUnavailableException e) {
             System.out.println(e.getMessage());
-        } catch (UnknownHostException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        }
+    }
+
+    private static void playStreamAudio(DatagramSocket clientSocket) throws SocketException, LineUnavailableException {
+        clientSocket.setSoTimeout(2000);
+        AudioFormat format = new AudioFormat(22050,
+                16, 1,
+                true, false);
+        DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
+        SourceDataLine line = (SourceDataLine) AudioSystem.getLine(info);
+        line.open();
+        line.start();
+        byte[] buffer = new byte[PACKET_SIZE];
+        while (true) {
+            try {
+                DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+                clientSocket.receive(packet);
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+                break;
+            }
+            line.close();
         }
     }
 }
