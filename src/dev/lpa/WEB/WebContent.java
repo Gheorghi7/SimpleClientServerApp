@@ -1,0 +1,44 @@
+package dev.lpa.WEB;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class WebContent {
+    static void main() {
+        try {
+//            URL url = new URL("http://example.com");
+            URL url = new URL("https://jsonplaceholder.typicode.com/todos?id=5");
+//            printContent(url.openStream());
+            URLConnection connection = url.openConnection();
+            System.out.println(connection.getContentType());
+            connection.getHeaderFields().
+                    entrySet().
+                    forEach(System.out::println);
+            System.out.println(connection.getHeaderField("Cache-Control"));
+            connection.connect();
+            printContent(connection.getInputStream());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    private static void printContent(InputStream is) {
+        try (
+                BufferedReader inputStream = new BufferedReader(new InputStreamReader(is));
+        ) {
+            String line;
+            while ((line = inputStream.readLine()) != null) {
+                System.out.println(line);
+
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
