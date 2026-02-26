@@ -48,6 +48,8 @@ public class SimpleHttpServer {
                             </body>
                         </html>
                         """.formatted(visitorCounter, first == null ? "" : first, last == null ? "" : last);
+
+
                 var bytes = response.getBytes();
 
 
