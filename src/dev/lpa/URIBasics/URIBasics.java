@@ -2,20 +2,26 @@ package dev.lpa.URIBasics;
 
 import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class URIBasics {
     static void main() {
-        URI timeSite = URI.create("https://learnprogramming.academy:5000/courses/complete-java-masterclass?pass=dalsda?log=dsadsda");
+        URI baseSite = URI.create("https://learnprogramming.academy");
+        URI timeSite = URI.create("courses/complete-java-masterclass");
         printURI(timeSite);
-        URL url = null;
+
         try {
-            url = timeSite.toURL();
-        } catch (MalformedURLException e) {
-            System.out.println("Malformed URL");
+            URI masterClass = baseSite.resolve(timeSite);
+            URI uri = new URI("http://user/pw@gmail.com:5000");
+            printURI(uri);
+            URL url = masterClass.toURL();
+            System.out.println(url);
+            printURL(url);
+
+        } catch (MalformedURLException | URISyntaxException e) {
+            throw new RuntimeException(e);
         }
-        assert url != null;
-        printURL(url);
     }
 
     private static <T extends URI> void printURI(T uri) {

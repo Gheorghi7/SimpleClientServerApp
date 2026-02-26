@@ -1,0 +1,73 @@
+[33mcommit 85b22d22f0cda545e37e4db0b051c304d87d7f57[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mclientServerAppB[m[33m, [m[1;33mtag: [m[1;33mv1.0.9[m[33m, [m[1;31morigin/clientServerAppB[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Sun Feb 22 13:21:55 2026 +0200
+
+    URI/URL Basic
+
+[33mcommit a13630581cf23b99364fd5da25f6494587ebfcce[m[33m ([m[1;33mtag: [m[1;33mv1.0.8[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Sat Feb 21 16:28:58 2026 +0200
+
+    DtagramSocketServer
+
+[33mcommit cd0ad285ca6a47b3e7ef271e98fc9725b1b88264[m[33m ([m[1;33mtag: [m[1;33mv1.0.7[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Fri Feb 20 11:05:00 2026 +0200
+
+    DatagramClientServerApp
+
+[33mcommit f3cd60c933a857d85608de39579fb73478d84945[m[33m ([m[1;33mtag: [m[1;33mv1.0.6[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Fri Feb 20 00:06:35 2026 +0200
+
+    UDPServerClient
+
+[33mcommit 83a5bc16f2bf3603887d9c37d15b3c33549caaba[m[33m ([m[1;33mtag: [m[1;33mv1.0.5[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Wed Feb 18 10:23:32 2026 +0200
+
+    Event Driven Selectors
+
+[33mcommit 702a6455b02e863b44e02fbde6354c61d484c7ea[m[33m ([m[1;33mtag: [m[1;33mv1.0.4[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Tue Feb 17 19:59:06 2026 +0200
+
+    NetworkPolling(fail)
+
+[33mcommit 78929be3db73f77df466f6127708ef2f7a7fe4bc[m[33m ([m[1;33mtag: [m[1;33mv1.0.3[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Mon Feb 16 21:35:39 2026 +0200
+
+    ByteBuffer exemple
+
+[33mcommit db0d431d7afdfa686ea06079e333619625b769a6[m[33m ([m[1;33mtag: [m[1;33mv1.0.2[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Sun Feb 15 15:41:16 2026 +0200
+
+    ServerSocketChannel
+
+[33mcommit 49e01c9db7b7a76f199de643e17c56a6f22dbb7d[m[33m ([m[1;33mtag: [m[1;33mv1.0.1[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Sun Feb 15 14:50:46 2026 +0200
+
+    MultiThreadedClientServerApp
+
+[33mcommit 346525ba984ddff20d13f40238c0d977fd33bc8f[m[33m ([m[1;33mtag: [m[1;33mv1.0.0[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Sun Feb 15 12:42:08 2026 +0200
+
+     On branch clientServerAppB
+     Changes to be committed:
+            new file:   .gitignore
+            new file:   .idea/.gitignore
+            new file:   .idea/misc.xml
+            new file:   .idea/modules.xml
+            new file:   ClientServer.iml
+            new file:   src/dev/lpa/client/SimpleClient.java
+            new file:   src/dev/lpa/server/SimpleServer.java
+
+[33mcommit ce1fac400ff67c6405caa9b1ed59d831bd66068a[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Gheorghi <valentina161012@gmail.com>
+Date:   Sun Feb 15 12:40:10 2026 +0200
+
+    first commit
